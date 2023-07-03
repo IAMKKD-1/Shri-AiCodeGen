@@ -16,7 +16,6 @@ copyButtons.forEach((button) => {
     const codeElement = button.parentNode.querySelector("code");
     copyToClipboard(codeElement.innerText);
     button.innerText = "Copied!";
-    button.disabled = true;
   });
 });
 function copyToClipboard(text) {

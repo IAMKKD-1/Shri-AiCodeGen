@@ -34,7 +34,7 @@ def generate_responses(message):
         string = ""
         for i in final_code:
             highlighted_code = highlight(i, PythonLexer(), HtmlFormatter())
-            string += highlighted_code.replace("\n", "<br>") + "<br><br>"
+            string += highlighted_code.replace("\n", "<br>")
         return string, True
     else:
         return str_to_return, False

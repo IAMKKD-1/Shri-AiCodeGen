@@ -15,8 +15,11 @@ database=os.getenv('DBNAME')
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-conn = mysql.connector.connect(host=host, user=user, password=password, database=database)
-cursor = conn.cursor()
+try:
+    conn = mysql.connector.connect(host=host, user=user, password=password, database=database)
+    cursor = conn.cursor()
+except:
+    print("Error connecting to database")
 
 conversation = []
 
