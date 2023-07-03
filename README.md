@@ -6,6 +6,4 @@ This application provides a user-friendly interface for developers to input thei
 
 
 
-
-https://user-images.githubusercontent.com/88988596/236627701-6146bde7-a0b5-40bd-a5f7-d56ac550157c.mp4
-
+![Website Demonstration](https://github.com/IAMKKD-1/Shri-AiCodeGen/blob/main/Diagram/Website%20Demo.gif?raw=true)
