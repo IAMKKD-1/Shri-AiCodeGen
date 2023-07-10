@@ -2,12 +2,16 @@ var chatContainer = document.querySelector(".chat-container");
 function scrollToBottom() {
   chatContainer.scrollTop = chatContainer.scrollHeight;
 }
-scrollToBottom();
-document
-  .getElementById("message-form")
-  .addEventListener("submit", function (event) {
-    scrollToBottom();
-  });
+
+function requestScrollToBottom() {
+  requestAnimationFrame(scrollToBottom);
+}
+
+window.addEventListener("load", requestScrollToBottom);
+
+document.getElementById("message-form").addEventListener("submit", function (event) {
+  requestScrollToBottom();
+});
 
 const copyButtons = document.querySelectorAll(".copy-button");
 copyButtons.forEach((button) => {

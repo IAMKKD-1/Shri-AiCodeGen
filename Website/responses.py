@@ -1,7 +1,5 @@
 import json
-from pygments import highlight
-from pygments.lexers import PythonLexer
-from pygments.formatters import HtmlFormatter
+from time import sleep
 
 def generate_responses(message):
     with open("codes.json") as f:
@@ -10,7 +8,7 @@ def generate_responses(message):
     final_code = []
     str_to_return = ""
     user_inp = message.lower() if message else ""
-
+    sleep(2)
     if len(user_inp) == 0:
         str_to_return = "Please enter a valid input"
     elif user_inp in data:
@@ -28,13 +26,13 @@ def generate_responses(message):
 
     if len(final_code) == 1:
         codeToPrint = final_code[0]
-        highlighted_code = highlight(codeToPrint, PythonLexer(), HtmlFormatter())
-        return highlighted_code.replace("\n", "<br>"), True
+        return codeToPrint, True
     elif final_code:
         string = ""
         for i in final_code:
-            highlighted_code = highlight(i, PythonLexer(), HtmlFormatter())
-            string += highlighted_code.replace("\n", "<br>")
+            string += i
+            string += '\n\n'
+
         return string, True
     else:
         return str_to_return, False

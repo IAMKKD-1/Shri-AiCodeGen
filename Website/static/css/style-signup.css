@@ -4,16 +4,16 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin-top: -50px;
-    max-width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -50px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 .logo {
@@ -59,7 +59,7 @@ input {
 
 .submit-button,
 .google-button {
-  width: 145px; 
+  width: 145px;
   padding: 10px;
   font-size: 16px;
   font-weight: 600;
@@ -79,10 +79,10 @@ input {
   color: white;
   cursor: pointer;
 }
-  
+
 .google-button {
-    margin-right: 5px;
-  }
+  margin-right: 5px;
+}
 
 .login-link {
   font-size: 14px;
@@ -96,5 +96,20 @@ input {
 }
 
 .login-link a:hover {
-    color: black;
+  color: black;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: #000;
 }

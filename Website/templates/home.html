@@ -15,12 +15,15 @@
          type="text/css"
          href="{{url_for('static', filename='css/style-home.css')}}"
          />
-      <style>
-         {{ pygments_css | safe }}
-      </style>
+         <link rel="stylesheet" 
+         type="text/css" 
+         href="{{url_for('static', filename='js/highlight/styles/gradient-dark.min.css')}}">
    </head>
    <body>
-      <div class="logo">Shri.ai</div>
+      <div class="logo"><a href="/home">Shri.ai</a></div>
+      <div class="api-button-container">
+         <a href="/api" class="logout-button">API</a>
+       </div>
       <div class="container">
          <div class="chat-container">
             <div class="message">
@@ -36,7 +39,9 @@
                <span class="user">Shri:</span>
                <span class="text">
                   {% if entry.is_code %}
-                  <pre class="highlight" ><code>{{ entry.response | safe }}</code></pre>
+                  <div class="code-block">
+                     <pre class="language-python" ><code>{{ entry.response | safe }}</code></pre>
+                  </div>
                   <button class="copy-button" data-code="{{ loop.index0 }}">Copy</button>
                   {% else %}
                   <span class="text">{{ entry.response }}</span>
@@ -62,6 +67,8 @@
          </div>
          <a href="/logout" class="logout-button">Logout</a>
       </div>
-      <script src="{{url_for('static', filename='js/homepage.js')}}"></script>
+      <script src="{{url_for('static', filename = 'js/homepage.js')}}"></script>
+      <script src="{{url_for('static', filename = 'js/highlight/highlight.min.js')}}"></script>
+      <script>hljs.highlightAll();</script>
    </body>
 </html>

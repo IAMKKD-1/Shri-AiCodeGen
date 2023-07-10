@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-top: -50px;
+  margin-top: -80px;
   max-width: 100%;
   padding: 0 20px;
   box-sizing: border-box;
@@ -34,6 +34,12 @@ body {
 .button-container {
   display: flex;
   justify-content: center;
+}
+
+.api-button-container {
+  position: absolute;
+  top: 5px;
+  right: 20px;
 }
 
 .button-link {
@@ -64,4 +70,19 @@ body {
 .button-link:focus,
 .button-link:active {
   outline: none;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Rubik", sans-serif;
+  color: #000;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: #000;
 }

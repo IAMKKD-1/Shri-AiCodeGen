@@ -18,6 +18,11 @@ body {
   overflow: auto;
 }
 
+.api-button-container {
+  position: absolute;
+  right: 90px;
+}
+
 .chat-container {
   width: 100%;
   max-width: 800px;
@@ -68,7 +73,7 @@ body {
 }
 
 #send-button {
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 .input-container button:hover,
@@ -131,15 +136,6 @@ body {
   cursor: pointer;
 }
 
-.highlight {
-  background-color: #f1f1f1;
-  padding: 10px;
-  margin-top: 10px;
-  white-space: pre-wrap;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 14px;
-}
-
 .copy-button {
   padding: 5px 10px;
   font-size: 12px;
@@ -174,6 +170,7 @@ body {
   overflow-y: auto;
   transition: height 0.3s;
   margin-top: 10px;
+  font-family: "Rubik", sans-serif;
 }
 
 #message-input:not(:focus) {
@@ -189,3 +186,25 @@ body {
   top: 20px;
   left: 20px;
 }
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+}
+
+.code-block {
+  white-space: pre-wrap;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.code-block pre {
+  margin-top: -30px;
+  margin-bottom: -20px;
+}
+
+.code-block code {
+  display: block;
+}
+

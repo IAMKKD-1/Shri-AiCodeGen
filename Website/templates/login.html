@@ -10,6 +10,7 @@
     <link rel="stylesheet" type='text/css' href="{{url_for('static', filename='css/style-login.css')}}"/>
 </head>
 <body>
+    <div class="logo-text"><a href="/home">Shri.ai</a></div>
     <div class="container">
         <img src="static\images\Shri_s_Logo-removebg.png" alt="Shri's Logo" class="logo">
         <h2 class="form-title">Log In</h2>
@@ -22,6 +23,7 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Enter your password" required>
             </div>
+            <p class="signup-link"><a href="/forgot-password">Forgot Password?</a></p>
             <button class="google-button">Login with Google</button>
             <button type="submit" class="submit-button">Log In</button>
             {% if error_message %}
