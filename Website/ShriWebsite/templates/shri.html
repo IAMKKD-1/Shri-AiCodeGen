@@ -1,0 +1,83 @@
+{%extends 'base.html'%}
+{%block title%}Chat - Shri{%endblock%} 
+{%block stylesheets%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{url_for('static', filename='css/shri.css')}}"
+/>
+<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{url_for('static', filename='images/Shri_Favicon.png')}}"
+  sizes="32x32"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/tomorrow-night-bright.min.css">
+{%endblock %} 
+{%block scripts%}
+<script src="{{url_for('static', filename = 'js/shri.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+{%endblock%}
+{%block content%}
+<body>
+  <nav class="navbar">
+    <div class="navbar-left">
+      <div class="logo-text"><a href="/">ShriAI</a></div>
+    </div>
+    <div class="navbar-middle navbar-logo-container">
+      <img
+        src="{{url_for('static', filename='images/Shri_Colourful.png')}}"
+        alt="ShriAI Logo"
+      />
+    </div>
+    <div class="navbar-right">
+      <a class="api-button" href="/api">API</a>
+      <a class="logout-button" href="/auth/logout">Logout</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="chat-container">
+      <div class="message">
+        <span class="user">Shri:</span>
+        <span class="text">Ask me to create any function in Python...</span>
+      </div>
+      {% for entry in conversation %}
+      <div class="message">
+        <span class="user">{{username}}: </span>
+        <span class="text">{{ entry['user'] | safe }}</span>
+      </div>
+      <div class="message">
+        <span class="user">Shri:</span>
+        <span class="text">
+          {% if entry.is_code %}
+          <div class="code-block">
+            <pre
+              class="language-python"
+            ><code>{{ entry.response | safe }}</code></pre>
+          </div>      
+          {% else %}
+          <span class="text">{{ entry.response | safe }}</span>
+          {% endif %}
+        </span>
+      </div>
+      {% endfor %}
+    </div>
+    <form id="message-form" method="post">
+      <div class="input-container">
+        <textarea
+          id="message-input"
+          name="message"
+          placeholder="Type your message"
+          rows="1"
+          autofocus
+          onkeydown="handleTextareaKeyPress(event)"></textarea>
+        <button id="send-button" type="submit">Send</button>
+      </div>
+    </form>
+    <div class="button-container">
+      <a href="/clear" class="clear-button">Clear</a>
+    </div>
+  </div>
+</body>
+{%endblock%}

@@ -1,0 +1,84 @@
+{%extends "base.html"%} 
+{%block title%}API Documentation - Shri{%endblock%}
+
+{%block stylesheets%}
+   <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/Shri_Favicon.png')}}" sizes="32x32">
+   <link rel="stylesheet" href="static/css/apidoc.css">
+{%endblock%}
+
+
+{%block content%}
+<body>
+   <div class="logo-text"><a href="/">ShriAI</a></div>
+   <img class="logo" src="{{url_for('static', filename='images/Shri_Colourful.png')}}" alt="Shri Logo">
+  <h1>API Documentation</h1>
+
+  <h2>Endpoint: /api/{user-id}/{user-input}</h2>
+  <p>
+    This API allows you to send a request to the AI system and receive a
+    response. The endpoint supports a GET method to submit a user input as a URL
+    path parameter.
+  </p>
+
+  <h3>Request</h3>
+  <p>
+    The request should be made using a GET request with the following URL
+    structure:
+  </p>
+  <pre>
+      <code>
+/api/{user-id}/{user-input}
+      </code>
+   </pre>
+
+  <h3>Response</h3>
+  <p>The response will be in JSON format with the following structure:</p>
+  <pre>
+      <code>
+{
+   "user_input": "The user input",
+   "user_id": "User ID",
+   "response": "The response from the AI system"
+}
+      </code>
+   </pre>
+
+  <h2>Examples</h2>
+
+  <h3>Example 1</h3>
+  <p><strong>URL:</strong></p>
+  <pre>
+      <code>
+/api/IAMKKD/How to reverse a string in Python?
+      </code>
+   </pre>
+  <p><strong>Response:</strong></p>
+  <pre>
+      <code>
+{
+   "user_input": "How to reverse a string in Python?",
+   "user_id": "IAMKKD",
+   "response": "def reverse(s):\\n  return s[::-1]"
+}
+      </code>
+   </pre>
+
+  <h3>Example 2</h3>
+  <p><strong>URL:</strong></p>
+  <pre>
+      <code>
+/api/IAMKKD/Write a Python program to find the factorial of a number
+      </code>
+   </pre>
+  <p><strong>Response:</strong></p>
+  <pre>
+      <code>
+{
+   "user_input": "Write a Python program to find the factorial of a number",
+   "user_id": "IAMKKD",
+   "response": "def factorial(n):\\n  if n == 0:\\n  return 1\\n  else:\\n  return n * factorial(n-1)\\n\\nnum"
+}
+      </code>
+   </pre>
+</body>
+{%endblock%}

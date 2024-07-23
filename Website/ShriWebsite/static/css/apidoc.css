@@ -1,0 +1,61 @@
+body {
+  font-family: "Rubik", sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000000;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 35px;
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 30px;
+}
+
+pre {
+  background-color: #e6e6e6;
+  padding-left: 12px;
+  padding-right: 12px;
+  border-radius: 5px;
+  overflow-x: auto;
+  color: black;
+}
+
+code {
+  font-family: Consolas, monospace;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  width: 180px;
+  height: 150px;
+  margin-bottom: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  width: auto;
+}

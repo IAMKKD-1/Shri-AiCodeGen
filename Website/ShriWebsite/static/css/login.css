@@ -1,0 +1,116 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -50px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.login-form {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  margin-bottom: 5px;
+}
+
+input {
+  width: 92%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.submit-button,
+.google-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fda700;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-button:hover,
+.google-button:hover {
+  background-color: black;
+  outline: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.google-button {
+  margin-top: 10px;
+}
+
+.signup-link {
+  font-size: 14px;
+  color: #c0c0c0;
+}
+
+.signup-link a {
+  color: #ffaa00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover {
+  color: white;
+}
+
+.logo {
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: white;
+}

@@ -1,0 +1,116 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #000000;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -90px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.form-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.reset-form {
+  width: 300px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 92%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.submit-button,
+.submit-otp {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #fda700;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.submit-button:hover,
+.submit-otp:hover {
+  background-color: black;
+  outline: 2px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.resend-pass {
+  font-size: 14px;
+  color: #c0c0c0;
+  margin-bottom: 4px;
+}
+
+.resend-pass a {
+  color: #ffaa00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resend-pass a:hover {
+  color: white;
+}
+
+.logo-text {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Rubik", sans-serif;
+  color: white;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.logo-text a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo {
+  width: 180px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+}

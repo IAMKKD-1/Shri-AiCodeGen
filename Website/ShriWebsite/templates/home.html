@@ -1,0 +1,32 @@
+{%extends 'base.html'%} 
+
+{%block stylesheets%}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{url_for('static', filename='css/home.css')}}"
+/>
+<link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/Shri_Favicon.png')}}" sizes="32x32">
+{%endblock %} 
+
+{%block content%}
+<body>
+  
+  <div class="api-button-container">
+    <a href="/api" class="button-link">API</a>
+  </div>
+  <div class="container-body">
+    <img
+      src="{{url_for('static', filename='images/Shri_Colourful.png')}}"
+      alt="Shri's Logo"
+      class="logo"
+    />
+    <p class="bold-text">Welcome to Shri</p>
+    <p class="normal-text">SignUp/Login with your account to continue</p>
+    <div class="button-container">
+      <a href="auth/signup" class="button-link">SignUp</a>
+      <a href="auth/login" class="button-link">Login</a>
+    </div>
+  </div>
+</body>
+{%endblock%}

@@ -1,0 +1,68 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #000000;
+  color: white;
+}
+
+.container-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: -80px;
+  max-width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  max-width: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 24px;
+}
+.normal-text {
+  font-weight: normal;
+  margin: -10px 30px 15px 20px;
+  font-size: 16px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.api-button-container {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+}
+
+.button-link {
+  width: 140px;
+  height: 45px;
+  line-height: 60px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fcac00;
+  color: black;
+  text-decoration: none;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-link:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  outline: 2px solid white;
+}
